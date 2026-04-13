@@ -1,0 +1,12 @@
+def birthdayCakeCandles(candles):
+    # Find the maximum height
+    tallest = max(candles)
+    
+    # Count how many candles have that maximum height
+    return candles.count(tallest)
+
+if __name__ == '__main__':
+    n = int(input().strip())
+    candles = list(map(int, input().rstrip().split()))
+    result = birthdayCakeCandles(candles)
+    print(result)
