@@ -1,0 +1,25 @@
+if __name__ == '__main__':
+    N = int(input())
+    my_list = []
+    
+    for _ in range(N):
+        # Split command into the action and its arguments
+        command, *args = input().split()
+        
+        # Convert arguments to integers
+        vals = list(map(int, args))
+        
+        if command == "insert":
+            my_list.insert(vals[0], vals[1])
+        elif command == "print":
+            print(my_list)
+        elif command == "remove":
+            my_list.remove(vals[0])
+        elif command == "append":
+            my_list.append(vals[0])
+        elif command == "sort":
+            my_list.sort()
+        elif command == "pop":
+            my_list.pop()
+        elif command == "reverse":
+            my_list.reverse()
