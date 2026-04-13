@@ -1,0 +1,14 @@
+import numpy
+
+# Read the dimension N
+n = int(input())
+
+# Read the N lines for array A
+a = numpy.array([list(map(int, input().split())) for _ in range(n)])
+
+# Read the N lines for array B
+b = numpy.array([list(map(int, input().split())) for _ in range(n)])
+
+# Compute the matrix product using dot
+# Note: For 2D arrays, dot performs matrix multiplication
+print(numpy.dot(a, b))
