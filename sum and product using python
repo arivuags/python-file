@@ -1,0 +1,16 @@
+import numpy
+
+# Read N and M
+n, m = map(int, input().split())
+
+# Create the 2D array
+my_array = numpy.array([input().split() for _ in range(n)], int)
+
+# Step 1: Compute sum along axis 0
+sum_result = numpy.sum(my_array, axis=0)
+
+# Step 2: Compute product of the result
+final_result = numpy.prod(sum_result)
+
+print(final_result)
+
