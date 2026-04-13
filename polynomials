@@ -1,0 +1,11 @@
+import numpy
+
+# Read the space-separated coefficients and convert to floats
+coefficients = list(map(float, input().split()))
+
+# Read the value of x
+x = float(input())
+
+# Evaluate the polynomial at x and print the result
+print(numpy.polyval(coefficients, x))
+
