@@ -1,0 +1,17 @@
+import numpy
+
+# Set print options for consistent formatting (optional but helpful)
+numpy.set_printoptions(legacy='1.13')
+
+# Read the dimension N
+n = int(input())
+
+# Read N lines and convert them into a NumPy array of floats
+matrix = numpy.array([input().split() for _ in range(n)], float)
+
+# Calculate the determinant
+det_value = numpy.linalg.det(matrix)
+
+# Print the result rounded to 2 decimal places
+print(round(det_value, 2))
+
