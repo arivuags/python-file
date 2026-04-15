@@ -1,0 +1,23 @@
+if __name__ == '__main__':
+    # Read the initial set A
+    n_a = int(input())
+    A = set(map(int, input().split()))
+    
+    # Read the number of operations
+    num_ops = int(input())
+    
+    for _ in range(num_ops):
+        # Read the operation name and the length of the other set
+        # We only need the name, so we can ignore the length
+        operation_info = input().split()
+        op_name = operation_info[0]
+        
+        # Read the elements of the other set
+        other_set = set(map(int, input().split()))
+        
+        # Use getattr to find the method on set A and call it with other_set
+        # Example: if op_name is 'update', it calls A.update(other_set)
+        getattr(A, op_name)(other_set)
+        
+    # Print the sum of the elements in the mutated set A
+    print(sum(A))
