@@ -1,0 +1,60 @@
+nguage: Python 3
+Open in editor
+1
+
+if __name__ == '__main__':
+
+2
+
+    x = int(input())
+
+3
+
+    y = int(input())
+
+4
+
+    z = int(input())
+
+5
+
+    n = int(input())
+
+6
+
+    
+
+7
+
+    # List comprehension to generate the 3D grid coordinates
+
+8
+
+    ans = [[i, j, k] for i in range(x + 1) 
+
+9
+
+                     for j in range(y + 1) 
+
+10
+
+                     for k in range(z + 1) 
+
+11
+
+                     if i + j + k != n]
+
+12
+
+    
+
+13
+
+    print(ans)
+
+14
+
+​
+
+
+​
