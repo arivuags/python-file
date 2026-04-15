@@ -1,0 +1,14 @@
+# Read input for English newspaper subscribers
+n = int(input())
+english_subs = set(map(int, input().split()))
+
+# Read input for French newspaper subscribers
+b = int(input())
+french_subs = set(map(int, input().split()))
+
+# Find the union of both sets
+# The union contains students subscribed to at least one newspaper
+total_subs = english_subs.union(french_subs)
+
+# Print the total count (size of the union set)
+print(len(total_subs))
